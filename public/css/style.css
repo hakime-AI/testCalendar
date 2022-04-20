@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+}
+
+body{
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/* overlay object on svg path */
+.motion-container {
+  position: relative;
+}
+
+.motion-object {
+  position: absolute;
+  /* left: 5px;
+  top: 5px; */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(154, 227, 240);
+  /* transform: translate(calc(1px * var(--x)), calc(1px * var(--y))); */
+  transition: transform 1s; 
+  animation: move 4s ease-in-out infinite;
+}
+
+@keyframes move {
+
+  from,
+  to {
+    transform: scale(1.0);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  /* to {
+    transform: translate(0, 6%);
+  }
+
+  25% {
+    transform: translate(-6%, 0);
+  }
+
+  50% {
+    transform: translate(0, -6%);
+  }
+
+  75% {
+    transform: translate(6%, 0);
+  } */
+}
